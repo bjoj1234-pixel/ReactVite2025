@@ -28,8 +28,28 @@ import image01 from '../public/images/image01.png'
 // import UserCard02 from './propsComponents/Props02'
 //import Product from './propsComponents/Props03'
 //import Counter01 from './propsComponents/stateCount'
-// import Counter02 from './propsComponents/stateCount02'
-import Props06 from './propsComponents/Props06'
+//import Counter02 from './propsComponents/stateCount02'
+//import Props06 from './propsComponents/Props06'
+//import Exstate01 from './stateComponent/Ex01'
+// import Exstate02 from './stateComponent/Ex02'
+//import Exstate03 from './stateComponent/Ex03'
+// import Exstate04 from './stateComponent/Ex04'
+//import Exstate05 from './stateComponent/Ex05'
+//import Exstate06 from './stateComponent/Ex06'
+//import Exstate07 from './stateComponent/Ex07'
+//import Exstate08 from './stateComponent/Ex08'
+//import Exstate09 from './stateComponent/Ex09'
+// import Exstate10 from './stateComponent/Ex10'
+// import Exstate11 from './stateComponent/Ex11'
+//import Test from './stateComponent/test'
+import Exstate13 from './stateComponent/Ex13'
+import Exstate14 from './stateComponent/Ex14'
+import Exstate15 from './stateComponent/Ex15'
+import Exstate16 from './stateComponent/Ex16'
+import Exstate17 from './stateComponent/Ex17'
+// import Exstate18 from './stateComponent/Ex18'
+import Exstate18 from './stateComponent/Ex18-02'
+import Blog from './stateComponent/Blog'
 
 
 //userCard() 함수 생성 하기 기본구조
@@ -151,10 +171,29 @@ function App() {
       <Product name="마우스" price={150000} /> */}
       {/* <Counter01 /> */}
       {/* <Counter02 /> */}
-      <Props06 type="error" msg="오류"/>
+      {/* <Props06 type="error" msg="오류"/>
       <Props06 type="success" msg="성공"/>
       <Props06 type="asd" msg="경고"/>
-      <Props06 type="qwe" msg="알림"/>
+      <Props06 type="qwe" msg="알림"/> */}
+      {/* <Exstate01 /> */}
+      {/* <Exstate02 /> */}
+      {/* <Exstate03 /> */}
+      {/* <Exstate04 /> */}
+      {/* <Exstate05 /> */}
+      {/* <Exstate06 /> */}
+      {/* <Exstate07 /> */}
+      {/* <Exstate08 /> */}
+      {/* <Exstate09 /> */}
+      {/* <Exstate10 /> */}
+      {/* <Exstate11 /> */}
+      {/* <Test /> */}
+      {/* <Exstate13 /> */}
+      {/* <Exstate14 /> */}
+      {/* <Exstate15 /> */}
+      {/* <Exstate16 /> */}
+      {/* <Exstate17 /> */}
+      {/* <Exstate18 /> */}
+      <Blog />
     </>
   )
   
