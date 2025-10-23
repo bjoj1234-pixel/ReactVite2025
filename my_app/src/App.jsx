@@ -42,14 +42,20 @@ import image01 from '../public/images/image01.png'
 // import Exstate10 from './stateComponent/Ex10'
 // import Exstate11 from './stateComponent/Ex11'
 //import Test from './stateComponent/test'
-import Exstate13 from './stateComponent/Ex13'
-import Exstate14 from './stateComponent/Ex14'
-import Exstate15 from './stateComponent/Ex15'
-import Exstate16 from './stateComponent/Ex16'
-import Exstate17 from './stateComponent/Ex17'
+// import Exstate13 from './stateComponent/Ex13'
+// import Exstate14 from './stateComponent/Ex14'
+// import Exstate15 from './stateComponent/Ex15'
+// import Exstate16 from './stateComponent/Ex16'
+// import Exstate17 from './stateComponent/Ex17'
 // import Exstate18 from './stateComponent/Ex18'
-import Exstate18 from './stateComponent/Ex18-02'
+//import Exstate18 from './stateComponent/Ex18-02'
 import Blog from './stateComponent/Blog'
+import MovieReview from './stateComponent/MovieReview'
+// import './MovieReview.css'
+import ShoppingList from './stateComponent/ShoppingList'
+import './ShoppingList.css'
+import CommentBoard from './stateComponent/CommentBoard'
+import './CommentBoard.css'
 
 
 //userCard() 함수 생성 하기 기본구조
@@ -193,7 +199,10 @@ function App() {
       {/* <Exstate16 /> */}
       {/* <Exstate17 /> */}
       {/* <Exstate18 /> */}
-      <Blog />
+      {/* <Blog /> */}
+      {/* <MovieReview /> */}
+      {/* <ShoppingList /> */}
+      <CommentBoard />
     </>
   )
   
