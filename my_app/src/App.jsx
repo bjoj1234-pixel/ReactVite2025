@@ -49,13 +49,19 @@ import image01 from '../public/images/image01.png'
 // import Exstate17 from './stateComponent/Ex17'
 // import Exstate18 from './stateComponent/Ex18'
 //import Exstate18 from './stateComponent/Ex18-02'
-import Blog from './stateComponent/Blog'
-import MovieReview from './stateComponent/MovieReview'
+//import Blog from './stateComponent/Blog'
+// import MovieReview from './stateComponent/MovieReview'
 // import './MovieReview.css'
-import ShoppingList from './stateComponent/ShoppingList'
-import './ShoppingList.css'
-import CommentBoard from './stateComponent/CommentBoard'
-import './CommentBoard.css'
+// import ShoppingList from './stateComponent/ShoppingList'
+// import './ShoppingList.css'
+// import CommentBoard from './stateComponent/CommentBoard'
+// import './CommentBoard.css'
+// import Modalchange from './stateUI/uitest01'
+// import LoginView from './stateUI/uitest02'
+// import PromptChange from './stateUI/uitest03'
+// import Parent from './stateUI/uitest04'
+//import AuthApp from './stateUI/member/AuthApp'
+import MovieApp from './stateUI/movie/MovieApp'
 
 
 //userCard() 함수 생성 하기 기본구조
@@ -202,7 +208,13 @@ function App() {
       {/* <Blog /> */}
       {/* <MovieReview /> */}
       {/* <ShoppingList /> */}
-      <CommentBoard />
+      {/* <CommentBoard /> */}
+      {/* <Modalchange /> */}
+      {/* <LoginView /> */}
+      {/* <PromptChange /> */}
+      {/* <Parent /> */}
+      {/* <AuthApp /> */}
+      <MovieApp />
     </>
   )
   
