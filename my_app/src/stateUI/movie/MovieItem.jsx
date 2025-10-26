@@ -6,30 +6,31 @@ export default function MovieItem(props){
     const[inputReview, setInputReview] = useState('');
 
     let movAdd = () => {
-        //영화 제목, 리뷰 배열을 얕은복사
-       const copyTit = [...props.tit] ;
-       const copyRev = [...props.rev];
-       //인덱스값
-       const copyMovieIndex = [...props.movieIndex];
+
+        //영화 배열을 얕은복사
+        let copyMov = [...props.inputMov];
 
        // 입력받은 값(제목, 리뷰) 없으면 메시지창
        if(!inputTit){
             return alert('입력해주세요');
        }
-
+       
        // 입력받은 값(제목, 리뷰) 추가
-       copyTit.unshift(inputTit);
-       copyRev.unshift(inputReview);
-       copyMovieIndex.push(copyMovieIndex.length-1);
+       copyMov.unshift({title:inputTit, review:inputReview});
 
-       // 영화 제목,리뷰 배열 재세팅
-       props.setTit(copyTit);
-       props.setRev(copyRev);
-       props.setMovieIndex(copyMovieIndex);
-
+       //unshift때문에 재배열후 id에 인덱스값 저장
+       copyMov = copyMov.map((item,index)=>(
+            {...item, id: index}
+        ));      
+       
+       // 영화 배열 재세팅
+       props.setinputMov(copyMov);
+       
        //input 입력창 초기화
        setInputTit('');
        setInputReview('');
+
+       console.log(copyMov);
     }
 
 
