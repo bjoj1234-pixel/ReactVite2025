@@ -18,13 +18,13 @@ export default function MovieApp(){
             <h3>영화 리뷰 관리 앱 🎬</h3>
             <div>
                 {/* 영화 제목, 리뷰입력 input */}
-                <MovieItem inputMov={inputMovie} setinputMov={(a)=>setInputMovie(a)} />
+                <MovieItem inputMov={inputMovie} setinputMov={(a)=>setInputMovie(a)} setModal={(a)=>setModalOpen(a)} />
 
                 {/* 입력한 영화리스트 li표시 */}
                 <MovieList inputMov={inputMovie} modal={modalOpen} setModal={(a)=>setModalOpen(a)} setInd={(b)=>setIndex(b)} />
                 
                 {/* 모달창 */}
-                {modalOpen && <MovieModal inputMov={inputMovie} modal={(a)=>setModalOpen(a)} ind={index} />}
+                {modalOpen && <MovieModal inputMov={inputMovie} setmodal={(a)=>setModalOpen(a)} ind={index} />}
             </div>
         </>
     )
