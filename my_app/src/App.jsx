@@ -6,7 +6,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 // 리액트는 이미지를 하나하나 import해서 개별로 가져올 수 있다.
 // public(공개형) 폴더의 이미지 파일은 import 하지 않아도 사용가능하다.
-import image01 from '../public/images/image01.png'
+//import image01 from '../public/images/image01.png'
 // import Ex01 from './components/Ex01'
 // import Ex02 from './components/Ex02'
 // import Ex03 from './components/Ex03'
