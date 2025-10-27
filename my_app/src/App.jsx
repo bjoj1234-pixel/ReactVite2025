@@ -49,7 +49,8 @@ import image01 from '../public/images/image01.png'
 // import Exstate17 from './stateComponent/Ex17'
 // import Exstate18 from './stateComponent/Ex18'
 //import Exstate18 from './stateComponent/Ex18-02'
-import Blog from './stateComponent/Blog'
+// import Blog from './stateComponent/Blog'
+// import BlogC from './stateComponent/Blog/blogc'
 // import MovieReview from './stateComponent/MovieReview'
 // import './MovieReview.css'
 // import ShoppingList from './stateComponent/ShoppingList'
@@ -62,6 +63,9 @@ import Blog from './stateComponent/Blog'
 // import Parent from './stateUI/uitest04'
 //import AuthApp from './stateUI/member/AuthApp'
 import MovieApp from './stateUI/movie/MovieApp'
+import NewMovie from './stateUI/NewMovie/MovieApp'
+import ShopApp from './stateUI/shop/ShopApp'
+import FoodApp from './stateUI/food/FoodApp'
 
 
 //userCard() 함수 생성 하기 기본구조
@@ -206,6 +210,7 @@ function App() {
       {/* <Exstate17 /> */}
       {/* <Exstate18 /> */}
       {/* <Blog /> */}
+      {/* <BlogC /> */}
       {/* <MovieReview /> */}
       {/* <ShoppingList /> */}
       {/* <CommentBoard /> */}
@@ -214,7 +219,10 @@ function App() {
       {/* <PromptChange /> */}
       {/* <Parent /> */}
       {/* <AuthApp /> */}
-      <MovieApp />
+      {/* <MovieApp /> */}
+      {/* <NewMovie /> */}
+      {/* <ShopApp /> */}
+      <FoodApp />
     </>
   )
   

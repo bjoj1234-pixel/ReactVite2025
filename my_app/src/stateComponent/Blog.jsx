@@ -120,7 +120,7 @@ function Modal(props){
     //if문 없이 하는방법: 값을 입력하면 값이 들어가고, 취소누르면 원래값이 들어가게
     //prompt의 특징: 취소를 누르면 기본값으로 null이 들어간다.
     titleCopy[props.index] = prompt("새 글 제목을 입력하세요", titleCopy[props.index]) || titleCopy[props.index]
-    
+    props.setPosts(titleCopy);
     // if(titleCopy[props.index]){
     //   props.setPosts(titleCopy);
     // }else{
