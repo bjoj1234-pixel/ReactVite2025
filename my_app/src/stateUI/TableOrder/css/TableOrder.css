@@ -1,0 +1,89 @@
+/* 공통CSS */
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+    outline: 0 !important;
+    border: 0;
+}
+
+/* 컨테이너 */
+.container{
+    width: 843px;
+    height: 525px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+/* 왼쪽 고정메뉴 */
+.left-menu{
+    float: left;
+    width: 200px;
+    height: 100%;
+    background-color: #ebebeb;
+}
+.left-menu ul{
+    margin: 15px 0;
+}
+.left-menu ul li a{
+    display: block;
+    width: 90%;
+    margin-left: 10%;
+    line-height: 45px;
+    font-size: 17px;
+    border-bottom: 1px solid #c5c5c5;
+    color: #000;
+}
+
+/* 오른쪽 메뉴리스트 */
+.right-list{
+    float: left;
+    width: calc(100% - 255px);
+}
+
+.right-list ul{
+    display: flex;
+    justify-content:center;
+    gap: 10px;    
+    flex-wrap: wrap;
+}
+.right-list ul li{
+    width: 30%;
+    cursor: pointer;
+}
+.right-list ul li .menuImg{
+    display: block;
+    height: 165px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+/* 우측 고정 장바구니 버튼 */
+.cart-button{
+    position: absolute;
+    width: 55px;
+    background-color: #ED6351;
+    height: 455px;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    border-radius: 50px 0 0 50px;
+}
+
+/* 모달창 공통CSS */
+.modal-wrap{
+    position: absolute;
+    top:0;
+    bottom:0;
+    right: 0;
+    z-index: 9;
+    background-color: #000;
+    width: 200px;
+    color: #fff;
+}

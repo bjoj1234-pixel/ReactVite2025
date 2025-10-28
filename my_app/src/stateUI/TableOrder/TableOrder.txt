@@ -1,0 +1,25 @@
+TableOrder.jsx
+상태관리(데이터중심)
+- bestMenu, foodMenu, sideMenu, drinkMenu, Cart, showCart, Order, showOrder 관리
+
+
+MenuList
+리스트UI
+- bestMenu, foodMenu, sideMenu, drinkMenu 메뉴 배열을 받아 출력
+
+CartList
+모달UI
+- 장바구니 상세 정보표시
+
+OrderList
+모달UI
+- 주문내역 상세 정보표시
+
+State(상태)
+- bestMenu, foodMenu, sideMenu, drinkMenu (메뉴 목록)
+- Cart, Order (장바구니, 주문내역 목록)
+- showCart, showOrder(모달 표시 여부)
+- addCart, addOrder(장바구니, 주문내역 추가 함수)
+
+
+bestMenu-> order요소 추가하여 수가 높은순으로 10개가 bestMenu에 뜨게
