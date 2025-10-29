@@ -9,6 +9,9 @@
     outline: 0 !important;
     border: 0;
 }
+button:hover {
+    border-color: transparent;
+}
 
 /* 컨테이너 */
 .container{
@@ -38,6 +41,10 @@
     border-bottom: 1px solid #c5c5c5;
     color: #000;
 }
+.left-menu .orderBtn{
+    background-color: #ED6351;
+    color: #fff;
+}
 
 /* 오른쪽 메뉴리스트 */
 .right-list{
@@ -50,7 +57,13 @@
     justify-content:center;
     gap: 10px;    
     flex-wrap: wrap;
+    height: 525px;
+    overflow-y: scroll;
 }
+.right-list ul::-webkit-scrollbar {
+  width: 0px;
+}
+
 .right-list ul li{
     width: 30%;
     cursor: pointer;
@@ -64,6 +77,10 @@
     border-radius: 10px;
 }
 
+.right-list ul li.best10:nth-child(n+11){
+    display: none;
+}
+
 /* 우측 고정 장바구니 버튼 */
 .cart-button{
     position: absolute;
@@ -74,6 +91,12 @@
     right: 0;
     transform: translate(0, -50%);
     border-radius: 50px 0 0 50px;
+    color: #fff;
+    letter-spacing: -2px;
+}
+.cart-button span{
+    font-size: 30px;
+    color: #fff356
 }
 
 /* 모달창 공통CSS */
@@ -83,7 +106,99 @@
     bottom:0;
     right: 0;
     z-index: 9;
-    background-color: #000;
-    width: 200px;
+    background-color: #212121;
+    width: 260px;
     color: #fff;
+    padding: 20px;
+    transition: 0.3s;
+}
+.modal-wrap .xBtn{
+    position: absolute;
+    left: -16px;
+    top: -9px;
+    background-color: transparent;
+    color: #fff;
+    font-size: 24px;
+}
+.modal-wrap h3{
+    padding-bottom: 5px;
+}
+.modal-wrap ul{
+    height: 380px;
+    overflow-y: scroll;
+}
+
+.modal-wrap ul::-webkit-scrollbar {
+  width: 0px;
+}
+.modal-wrap ul li{
+    padding: 7px 0;
+    border-bottom: 1px solid #3d3d3d;
+    position: relative;
+}
+.modal-wrap ul li .cart-info{
+    display: flex;
+    padding-top: 10px;
+}
+
+.modal-wrap ul li .cart-name{
+    text-align: left;
+    font-size: 17px;
+}
+.modal-wrap ul li .cart-info button{
+    width: 30px;
+    padding: 0;
+    height: 30px;
+    line-height: 22px;
+    font-size: 20px;
+}
+.modal-wrap ul li .cart-info .cart-quantity{
+    position: absolute;
+    right: 0;
+    bottom: 7px;
+}
+.modal-wrap ul li .cart-info .cart-quantity .num{
+    padding: 0px 7px;
+    font-size: 17px;
+    vertical-align: text-bottom; 
+}
+
+
+
+.modal-wrap .pay{
+    position: absolute;
+    bottom: 45px;
+    right: 0;
+    left: 0;
+    line-height: 45px;
+    overflow: hidden;
+    background-color: #000;
+}
+.modal-wrap.order .pay{
+    bottom: 0;
+}
+.modal-wrap .pay span:nth-child(1){
+    float: left;
+    padding-left: 20px;
+    font-size: 14px;
+    letter-spacing: -1px;
+}
+.modal-wrap .pay span:nth-child(2){
+    float: right;
+    padding-right: 20px;
+    padding-left: 4px;
+    font-size: 14px;
+}
+.modal-wrap .pay span:nth-child(3){
+    float: right;
+    font-size: 20px;
+}
+.modal-wrap .order{
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    left: 0;
+    background-color: #ed3f28;
+    color: #fff;
+    border-radius: 0;
 }

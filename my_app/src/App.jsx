@@ -37,8 +37,7 @@ import image01 from '../public/images/image01.png'
 // import CommentBoard from './stateComponent/CommentBoard'
 // import './CommentBoard.css'
 // import Modalchange from './stateUI/uitest01'
-// import LoginView from './stateUI/uitest02'
-// import PromptChange from './stateUI/uitest03'
+// ~
 // import Parent from './stateUI/uitest04'
 //import AuthApp from './stateUI/member/AuthApp'
 // import MovieApp from './stateUI/movie/MovieApp'
@@ -47,12 +46,13 @@ import image01 from '../public/images/image01.png'
 // import FoodApp from './stateUI/food/FoodApp'
 //import Hover01 from './stateUI/hover01'
 //~
-import Hover04 from './stateUI/hover04'
-import ChangeImg01 from './stateUI/ChangeImg01'
-import ChangeImg02 from './stateUI/ChangeImg02'
-import ChangeImg03 from './stateUI/ChangeImg03'
-import ChangeImg04 from './stateUI/ChangeImg04'
-import TableOrder from './stateUI/TableOrder/TableOrder'
+// import Hover04 from './stateUI/hover04'
+// import ChangeImg01 from './stateUI/ChangeImg01'
+//~
+// import ChangeImg04 from './stateUI/ChangeImg04'
+// import TableOrder from './stateUI/TableOrder/TableOrder'
+// import Eff01 from './Effect/Eff01'
+import Eff09 from './Effect/Eff09'
 
 
 //userCard() 함수 생성 하기 기본구조
@@ -192,10 +192,11 @@ function App() {
       {/* <Hover01 /> */}
       {/* <Hover04 /> */}
       {/* <ChangeImg01 /> */}
-      {/* <ChangeImg02 /> */}
-      {/* <ChangeImg03 /> */}
+      {/* ~ */}
       {/* <ChangeImg04 /> */}
-      <TableOrder />
+      {/* <TableOrder /> */}
+      {/* <Eff01 /> */}
+      <Eff09 />
     </>
   )
   
