@@ -52,7 +52,10 @@ import image01 from '../public/images/image01.png'
 // import ChangeImg04 from './stateUI/ChangeImg04'
 // import TableOrder from './stateUI/TableOrder/TableOrder'
 // import Eff01 from './Effect/Eff01'
-import Eff09 from './Effect/Eff09'
+// import Eff09 from './Effect/Eff09'
+// import Ex01 from './Effect/Ex01'
+// ~
+import Ex11 from './Effect/Ex11'
 
 
 //userCard() 함수 생성 하기 기본구조
@@ -196,7 +199,10 @@ function App() {
       {/* <ChangeImg04 /> */}
       {/* <TableOrder /> */}
       {/* <Eff01 /> */}
-      <Eff09 />
+      {/* <Eff09 /> */}
+      {/* <Ex01 /> */}
+      {/* ~ */}
+      <Ex11 />
     </>
   )
   
