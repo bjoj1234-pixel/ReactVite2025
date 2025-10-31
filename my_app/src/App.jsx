@@ -55,7 +55,12 @@ import image01 from '../public/images/image01.png'
 // import Eff09 from './Effect/Eff09'
 // import Ex01 from './Effect/Ex01'
 // ~
-import Ex11 from './Effect/Ex11'
+// import Ex11 from './Effect/Ex11'
+// import ExJ01 from './JSON/ExJ01'
+// ~
+//import ExJ05 from './JSON/ExJ05'
+// import ProductApp from './JSON/ExJ06/ProductApp'
+import ExJ06 from './JSON/ExJ06'
 
 
 //userCard() 함수 생성 하기 기본구조
@@ -202,7 +207,11 @@ function App() {
       {/* <Eff09 /> */}
       {/* <Ex01 /> */}
       {/* ~ */}
-      <Ex11 />
+      {/* <Ex11 /> */}
+      {/* <ExJ01 /> */}
+      {/* <ExJ05 /> */}
+      {/* <ProductApp /> */}
+      <ExJ06 />
     </>
   )
   
