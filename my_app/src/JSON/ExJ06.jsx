@@ -12,9 +12,18 @@ export default function ExJ06(){
 
     useEffect(()=>{
         fetch(`https://fakestoreapi.com/products`)
-        .then((res)=>res.json())
+        .then((res)=>{
+            if(!res.ok){ 
+                throw new Error(`에러메시지 ${res.status}`)
+            }
+            return res.json()
+        })
         .then((data)=>{
             setData(data);
+            //console.log(`Json으로 ${data}`) =>[Object,Object]러 출력된다
+            //배열 또는 객체는 문자열로 바꾸어 출력하는데
+            //.toString() 자바스크립트 변환방식의 한계로 저렇게 출력이된다.
+            //고로 여기서는 console.log(인수1, 인수2)
             const copyData = [...data];
             copyData.sort((a,b)=>b.price - a.price);
             setSort(copyData);

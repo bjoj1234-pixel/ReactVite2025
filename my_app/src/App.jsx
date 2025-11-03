@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import {Routes, Route} from 'react-router-dom';
+
 import reactLogo from './assets/react.svg'
 //src -> assets -> 이미지 파일은 반드시 import한다. (assets는 비공개형)
 import viteLogo from '/vite.svg'
@@ -60,7 +62,17 @@ import image01 from '../public/images/image01.png'
 // ~
 //import ExJ05 from './JSON/ExJ05'
 // import ProductApp from './JSON/ExJ06/ProductApp'
-import ExJ06 from './JSON/ExJ06'
+// import ExJ06 from './JSON/ExJ06'
+// import Home from './Pages/Home'
+// import About from './Pages/About'
+// import ProdApp from './Pages/ProdApp'
+// import ProdDetail from './Pages/ProdDetail'
+// import Fakestore from './Pages/Fake/Fakestore'
+// import FakestoreDetail from './Pages/Fake/FakestoreDetail'
+// import useProduct from './Pages/Fake/Data'
+import RecipeData from './Pages/Recipes/RecipeData'
+import RecipeList from './Pages/Recipes/RecipeList'
+import RecipeDetail from './Pages/Recipes/RecipeDetail'
 
 
 //userCard() 함수 생성 하기 기본구조
@@ -73,14 +85,14 @@ function UserCard(props){
   //{name,age}와 같이 매개변수를 따로 써도된다.
   return(
     <>
-      <div style={{border:'1px solid #ddd',
+      {/* <div style={{border:'1px solid #ddd',
         padding:'15px',
         margin:'10px',
         borderRadius:'8px'
       }}>        
         <h2>{props.name}</h2>
         <h2>{props.age}</h2>
-      </div>
+      </div> */}
     </>
   )
 }
@@ -89,21 +101,26 @@ function UserCard(props){
 function App() {
   //리액트는 반드시 return() 안에서 실행할 HTML 문서를 작성한다.
 
-  const name = '홍길동';
-  let isLoggin = true;
-  let fruits = ['사과','오렌지','바나나'];
+  // const name = '홍길동';
+  // let isLoggin = true;
+  // let fruits = ['사과','오렌지','바나나'];
 
-  let user = {name: '김철수', age:25, email: 'kim@naver.com'};
+  // let user = {name: '김철수', age:25, email: 'kim@naver.com'};
 
-  const btnClick = ()=>{
-    console.log('버튼이 클릭되었습니다');
-  }
+  // const btnClick = ()=>{
+  //   console.log('버튼이 클릭되었습니다');
+  // }
 
-  const products = [
-    { id: 1, name: "노트북", price: 1200000 },
-    { id: 2, name: "마우스", price: 30000 },
-    { id: 3, name: "키보드", price: 80000 }
-  ];
+  // const products = [
+  //   { id: 1, name: "노트북", price: 1200000 },
+  //   { id: 2, name: "마우스", price: 30000 },
+  //   { id: 3, name: "키보드", price: 80000 }
+  // ];
+
+  //내가만든 UseProduct훅을 불러옴
+  // const data = useProduct();
+
+  const data = RecipeData();
   
 
   return (
@@ -211,7 +228,29 @@ function App() {
       {/* <ExJ01 /> */}
       {/* <ExJ05 /> */}
       {/* <ProductApp /> */}
-      <ExJ06 />
+      {/* <ExJ06 /> */}
+      {/* 반드시 import후 불러와야됨 */}
+      {/* BrowserRouter는 보통 main.jsx에 넣어줌 */}
+      {/* <BrowserRouter> */}
+        {/* <Routes>  
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+        </Routes> */}
+      {/* </BrowserRouter> */}
+      {/* <Routes>  
+          <Route path='/' element={<ProdApp />} />
+          <Route path='/detail/:id' element={<ProdDetail />} />
+      </Routes> */}
+      {/* 커스텀 훅이든 이미 존재하는 훅이든 JSX안으로 가져올수 없다 */}
+      {/* const data = UseProduct(); 이런식으로 함수 형식으로 불러온후, 이것을 넣어준다*/}
+      {/* <Routes>  
+          <Route path='/' element={<Fakestore data={data}/>} />
+          <Route path='/products/:category/:id' element={<FakestoreDetail data={data} />} />
+      </Routes> */}
+      <Routes>
+        <Route path='/' element={<RecipeList data={data} />} />
+        <Route path='/detail/:id' element={<RecipeDetail data={data} />}></Route>
+      </Routes>
     </>
   )
   
