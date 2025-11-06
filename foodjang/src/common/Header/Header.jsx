@@ -9,7 +9,7 @@ export default function Header(){
                     <div className="a-link">
                         <Link to='/login'>로그인</Link>
                         <Link to='/'>회원가입</Link>
-                        <Link to='/'>고객센터</Link>
+                        <Link to='/wish'>찜목록</Link>
                     </div>
                     <div className="logo-wrap">
                         <Link to='/'>

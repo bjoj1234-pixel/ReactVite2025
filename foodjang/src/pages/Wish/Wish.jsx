@@ -1,48 +1,11 @@
-import { useState,useContext } from "react";
+import '../Wish/Wish.css'
+import { useState, useContext } from "react";
+import { AuthContext } from '../../AuthContext';
 import { Link } from "react-router-dom";
-import { AuthContext } from "../../AuthContext";
-import './NewMeals.css';
 
-export default function NewMeals({data}){
+export default function Wish({data}){
     const{wishList, wishHandler} = useContext(AuthContext);
     
-    const[list, setList] = useState(null);
-    const[inputVal, setInputVal] = useState('');
-    const[view, setView] = useState(6);
-
-    const listRating = () =>{
-        const copyData = [...data];
-        const copySort = copyData.sort((a,b)=> b.rating - a.rating);        
-        setList(copySort);
-    }
-
-    const listReview = () =>{
-        const copyData = [...data];
-        const copySort = copyData.sort((a,b)=> b.reviewCount - a.reviewCount);        
-        setList(copySort);
-    }
-
-    const listChange = (val) =>{
-        setInputVal(val);
-
-        const copyData = [...data];
-
-        if(val !== 'all'){
-            const filtering = copyData.filter((item)=>(item.mealType.includes(val) || item.tags.includes(val)));
-            setList(filtering);
-        }else{
-            setList(copyData);
-        }
-                
-    }
-
-    const viewChange = (view) =>{
-        setView(Number(view));
-
-    }
-    // const copyData = [...data];
-    // const filtering = copyData.filter((item)=>(item.mealType.includes(val)||item.tags.includes(val)));
-    //const[select, setSelect] = useState(filtering);
 
     return(
         <section className="main-content">
@@ -72,7 +35,7 @@ export default function NewMeals({data}){
             </div>
             <div className="contents">
                 <ul>
-                    {list !== null && list !== undefined ? list.slice(0,view).map((item)=>(
+                    {wishList !== null && list !== undefined ? list.slice(0,view).map((item)=>(
                         <li key={item.id}>
                             <Link to={`/detail/${item.id}`}>
                                 <img src={item.image} alt="#" /> 
@@ -100,4 +63,5 @@ export default function NewMeals({data}){
             </div>
         </section>
     )
+
 }

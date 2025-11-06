@@ -1,7 +1,11 @@
+import { useContext } from "react";
+import { AuthContext } from "../../AuthContext";
 import { Link } from "react-router-dom";
 import './Home.css'
 
 export default function Home({data}){
+    const{wishList, wishHandler} = useContext(AuthContext);
+
     //data얕은 복사
     const copyData1 = [...data];
     //인기상품 정렬(평점순)
@@ -28,8 +32,10 @@ export default function Home({data}){
                                     <img src={item.image} alt="#" /> 
                                     <p className="product-name">{item.name}</p>
                                     <p className="product-ingre">{item.ingredients}</p>
-                                    <p className="product-rating">⭐{item.rating} 💬{item.reviewCount}</p>
                                 </Link>
+                                    <p className="product-rating">⭐{item.rating} 💬{item.reviewCount} 
+                                        <button type="button" onClick={()=>wishHandler(item.id)}>{wishList[item.id]?'🧡찜해제':'🤍찜하기'}</button>
+                                    </p>                                
                             </li>
                         ))}
                     </ul>
@@ -43,8 +49,10 @@ export default function Home({data}){
                                     <img src={item.image} alt="#" /> 
                                     <p className="product-name">{item.name}</p>
                                     <p className="product-ingre">{item.ingredients}</p>
-                                    <p className="product-reviewCount">⭐{item.rating} 💬{item.reviewCount}</p>
                                 </Link>
+                                    <p className="product-reviewCount">⭐{item.rating} 💬{item.reviewCount} 
+                                        <button type="button" onClick={()=>wishHandler(item.id)}>{wishList[item.id]?'🧡찜해제':'🤍찜하기'}</button>
+                                    </p> 
                             </li>
                         ))}
                     </ul>

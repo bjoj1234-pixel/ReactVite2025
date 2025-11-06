@@ -12,7 +12,7 @@ import NewMeals from './pages/NewMeals/NewMeals'
 import Home from './pages/Home/Home'
 import Login from './common/Login/Login'
 import AuthProvider from './AuthContext';
-
+import Wish from './pages/Wish/Wish';
 
 
 function App() {
@@ -22,13 +22,15 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <AuthProvider>
+   
+        <AuthProvider >
         
           <Header />
           
           <Routes>
             <Route path='/' element={<Home data={data}/>}></Route>
             <Route path='/login' element={<Login data={data}/>}></Route>
+            <Route path='/wish' element={<Wish data={data}/>}></Route>
             <Route path='/new' element={<NewMeals data={data}/>}></Route>
             {/* <Route path='/detail/:id' element={<MealsDetail data={data}/>}></Route> */}
           </Routes>
@@ -36,6 +38,7 @@ function App() {
           <Footer />
           
         </AuthProvider>
+
       </BrowserRouter>
     </>
   )
