@@ -3,6 +3,7 @@ import { useState, useContext } from "react";
 import { AuthContext } from '../../AuthContext';
 import { Link } from "react-router-dom";
 
+
 export default function Login(){
     const{user, setUser, login, logout} = useContext(AuthContext);
 
@@ -22,23 +23,18 @@ export default function Login(){
     return(
         <div className='login-container'>
             <h2>로그인</h2>
-            {!user ? (
-                <div className="login-input">
-                    <p>회원 로그인</p>
-                    <form onSubmit={submitHandler}>
-                        <input type="text" placeholder='아이디' value={inputId} onChange={(e)=>setInputId(e.target.value)}/>
-                        <input type="text" placeholder='비밀번호' value={inputPw} onChange={(e)=>setInputPw(e.target.value)}/>
-                        <input type="checkbox" name="id-save" id="id-save" />
-                        <label htmlFor="id-save">아이디 저장</label>
-                        <button type='submit'>로그인</button>
-                    </form>
+            <div className="login-input">
+                <p>회원 로그인</p>
+                <div>
+                {/* <form onSubmit={submitHandler}> */}
+                    <input type="text" placeholder='아이디' value={inputId} onChange={(e)=>setInputId(e.target.value)}/>
+                    <input type="text" placeholder='비밀번호' value={inputPw} onChange={(e)=>setInputPw(e.target.value)}/>
+                    <input type="checkbox" name="id-save" id="id-save" />
+                    <label htmlFor="id-save">아이디 저장</label>
+                    <button type='submit' onClick={()=>submitHandler(inputId,inputPw)}>로그인</button>
+                {/* </form> */}
                 </div>
-            ):(
-                <div className="login-input">
-                    <p>{user.userId}님,</p>
-                    <p>로그인 되었습니다.</p>
-                </div>
-            )}
+            </div>
         </div>
     )
 

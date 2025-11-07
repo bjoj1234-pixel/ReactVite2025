@@ -1,19 +1,27 @@
 import { useState } from "react";
 import { createContext } from "react";
+import { useNavigate } from 'react-router-dom';
 import MealsData from './api/MealsData'
 
 export const AuthContext = createContext();
 
 export default function AuthProvider({children}){
+    const navigate = useNavigate();
 
     const data = MealsData();
     const[user, setUser] = useState(null);
 
     const login = (id, pw) =>{
-        setUser({userId: id, userPw: pw});
+        if(id==='1' && pw==='1'){
+            navigate('/');
+            setUser({userId: id, userPw: pw});            
+        }else{
+            alert('id, 비밀번호를 확인하세요');
+        }
     }
     const logout = () =>{
-        setUser(null);
+        navigate('/login');
+        setUser(null);        
     }
 
     const wish = {};
@@ -29,14 +37,14 @@ export default function AuthProvider({children}){
     //찜하기페이지 추가
     const[wishArray, setWishArray] = useState([]);
 
-    const wishHandler = (id) =>{
+    const wishHandler = (product) =>{
         const copyWishList = {...wishList};
         
-        copyWishList[id] = !copyWishList[id];
+        copyWishList[product.id] = !copyWishList[product.id];
 
         setWishList(copyWishList);
 
-        const pageAdd =  wishList.filter((item)=>item === true);
+        const pageAdd =  copyWishList.filter((item)=>item === true);
         setWishArray(pageAdd);
         console.log(wishArray);
     }

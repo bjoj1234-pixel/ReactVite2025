@@ -34,7 +34,7 @@ export default function Home({data}){
                                     <p className="product-ingre">{item.ingredients}</p>
                                 </Link>
                                     <p className="product-rating">⭐{item.rating} 💬{item.reviewCount} 
-                                        <button type="button" onClick={()=>wishHandler(item.id)}>{wishList[item.id]?'🧡찜해제':'🤍찜하기'}</button>
+                                        <button type="button" onClick={()=>wishHandler(item)}>{wishList[item.id]?'🧡찜해제':'🤍찜하기'}</button>
                                     </p>                                
                             </li>
                         ))}
@@ -51,7 +51,7 @@ export default function Home({data}){
                                     <p className="product-ingre">{item.ingredients}</p>
                                 </Link>
                                     <p className="product-reviewCount">⭐{item.rating} 💬{item.reviewCount} 
-                                        <button type="button" onClick={()=>wishHandler(item.id)}>{wishList[item.id]?'🧡찜해제':'🤍찜하기'}</button>
+                                        <button type="button" onClick={()=>wishHandler(item)}>{wishList[item.id]?'🧡찜해제':'🤍찜하기'}</button>
                                     </p> 
                             </li>
                         ))}

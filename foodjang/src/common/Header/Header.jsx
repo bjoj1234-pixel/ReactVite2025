@@ -1,14 +1,23 @@
 import { Link } from "react-router-dom";
 import './Header.css';
+import { useContext } from "react";
+import { AuthContext } from "../../AuthContext";
 
 export default function Header(){
+    const {user,logout} = useContext(AuthContext);
+    //console.log(user);
     return(
         <>
             <header>
                 <div className="header-wrap">
                     <div className="a-link">
-                        <Link to='/login'>로그인</Link>
-                        <Link to='/'>회원가입</Link>
+                        {user ? (<>
+                            <span>{user.userId}님 입장</span>
+                            <button type="button" onClick={logout}>로그아웃</button>
+                        </>)                   
+                        :(<Link to='/login'>로그인</Link>)
+                        }
+                        <Link to='/join'>회원가입</Link>
                         <Link to='/wish'>찜목록</Link>
                     </div>
                     <div className="logo-wrap">
