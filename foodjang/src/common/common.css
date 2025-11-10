@@ -17,3 +17,16 @@ a{
 a:hover{
     color: #000;
 }
+button{
+    border: 0;
+    background-color: transparent;
+    outline: 0;
+}
+button:hover{
+    border: 0;
+    outline: 0;
+}
+button:focus{
+    border: 0;
+    outline: 0;
+}

@@ -5,6 +5,19 @@ header .header-wrap{
     width: 1000px;
     margin: 0 auto;
 }
+header .header-wrap button{
+    font-size: 13px;
+    padding: 0 10px;
+    font-weight: 700;
+}
+header .header-wrap button:hover{
+    color: #ee4143;
+}
+header .header-wrap span{
+    font-size: 15px;
+    padding: 0px 5px;
+    font-weight: 700;
+}
 header .a-link{
     text-align: right;
     margin-bottom: 10px;

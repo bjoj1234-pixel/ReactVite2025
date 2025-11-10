@@ -48,3 +48,7 @@ section .contents ul li .product-reviewCount{
     font-size: 18px;
     font-weight: 600;
 }
+
+section .contents ul li .product-rating button{
+    padding: 6px 12px;
+}

@@ -10,12 +10,13 @@
     border-top: 2px solid #515151;
     font-size: 14px;
     padding: 0 10px;
+    margin-top: 5px;
 }
 .main-content .category .btns button{
     background-color: transparent;
     outline: 0;
     border: 0;
-    padding: 0 15px;
+    padding: 0 0 0 15px;
 }
 .main-content .category .btns button:first-child{
     padding-left: 0;
@@ -27,7 +28,13 @@
     cursor: pointer;
 }
 .main-content .category .btns label{
-    padding: 0 5px 0 15px;
+    padding: 0 5px 0 0;
+}
+.main-content .category .btns #mealtype{
+    margin-right: 15px;
+}
+.main-content .contents{
+    margin: 55px auto 0;
 }
 .main-content .contents ul{
     display: flex;

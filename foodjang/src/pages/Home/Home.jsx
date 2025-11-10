@@ -16,7 +16,7 @@ export default function Home({data}){
     //리뷰많은순 정렬
     const review = copyData2.sort((a,b)=> b.reviewCount - a.reviewCount);
 
-
+    
     return(
         <section className="container">
             <div className="main-bn">
@@ -34,7 +34,9 @@ export default function Home({data}){
                                     <p className="product-ingre">{item.ingredients}</p>
                                 </Link>
                                     <p className="product-rating">⭐{item.rating} 💬{item.reviewCount} 
-                                        <button type="button" onClick={()=>wishHandler(item)}>{wishList[item.id]?'🧡찜해제':'🤍찜하기'}</button>
+                                        <button type="button" onClick={()=>wishHandler(item)}>
+                                            {wishList[item.id] === undefined || wishList[item.id].div === false ? '🤍찜하기':'🧡찜해제'}
+                                        </button>
                                     </p>                                
                             </li>
                         ))}
@@ -50,8 +52,10 @@ export default function Home({data}){
                                     <p className="product-name">{item.name}</p>
                                     <p className="product-ingre">{item.ingredients}</p>
                                 </Link>
-                                    <p className="product-reviewCount">⭐{item.rating} 💬{item.reviewCount} 
-                                        <button type="button" onClick={()=>wishHandler(item)}>{wishList[item.id]?'🧡찜해제':'🤍찜하기'}</button>
+                                    <p className="product-reviewCount">⭐{item.rating} 💬{item.reviewCount}
+                                        <button type="button" onClick={()=>wishHandler(item)}>
+                                            {wishList[item.id] === undefined || wishList[item.id].div === false ? '🤍찜하기':'🧡찜해제'}
+                                        </button>
                                     </p> 
                             </li>
                         ))}

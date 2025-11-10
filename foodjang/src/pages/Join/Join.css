@@ -38,7 +38,8 @@
 .join-wrap .join-input input[type="password"]{
     cursor: pointer;
 }
-.join-wrap .join-input label{
+.join-wrap .join-input label,
+.join-wrap .join-input .user-gender{
     cursor: pointer;
     margin-left: 5px;
     color: #000;
@@ -70,7 +71,7 @@
     top: 50%;
     transform: translate(-50%, -50%);
 }
-.join-wrap #user-woman{
+.join-wrap input[type="radio"]{
     margin-left: 10px;
 }
 .join-wrap .modalOverlay .modalWrap .closeBtn{

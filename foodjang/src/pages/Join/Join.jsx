@@ -1,6 +1,7 @@
 import './Join.css';
 import DaumPostCode from 'react-daum-postcode';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Join(){
     //모달창 상태
@@ -54,7 +55,7 @@ export default function Join(){
     //이메일
     const[inputEmail, setInputEmail] = useState('');
     //성별
-    const[inputGender, setInputGender] = useState(null);
+    const[inputGender, setInputGender] = useState('');
     //개인정보수집
     const[inputInfo, setInputInfo] = useState(false);
     //가입상태
@@ -124,10 +125,14 @@ export default function Join(){
                         </div>
                     }                    
 
-                    <label htmlFor="user-gender">
-                        <input type="radio" name="user-gender" id="user-man" onClick={()=>setInputGender('main')} value={inputGender} />남
-                        <input type="radio" name="user-gender" id="user-woman" onClick={()=>setInputGender('woman')} value={inputGender} />여
-                    </label><br />
+                    <span className='user-gender'>성별 </span>
+                    
+                    <input type="radio" name="user-gender" id="user-man" onClick={()=>setInputGender('main')} value={inputGender} />
+                    <label htmlFor="user-man">남</label>
+                    
+                    <input type="radio" name="user-gender" id="user-woman" onClick={()=>setInputGender('woman')} value={inputGender} />
+                    <label htmlFor="user-woman">여</label>
+                    <br />
 
                     <input type="checkbox" name="user-agree" id="user-agree" onClick={infoToggle} value={inputInfo} />
                     <label htmlFor="user-agree">개인정보 수집 및 이용 동의(필수)</label>
@@ -138,6 +143,7 @@ export default function Join(){
                     <>
                         <p>회원가입이 완료되었습니다.</p>
                         <p>{inputName}님 환영합니다.</p>
+                        <Link to='/'><button type='button'>쇼핑하러가기</button></Link>
                     </>
                 )}
                     {/* </form> */}

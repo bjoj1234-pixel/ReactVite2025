@@ -8,7 +8,7 @@ import Header from './common/Header/Header'
 import Footer from './common/Footer/Footer'
 import MealsData from './api/MealsData'
 import NewMeals from './pages/NewMeals/NewMeals'
-//import MealsDetail from './Detail/MealsDetail'
+import MealsDetail from './pages/Detail/MealsDetail';
 import Home from './pages/Home/Home'
 import Login from './common/Login/Login'
 import AuthProvider from './AuthContext';
@@ -33,9 +33,9 @@ function App() {
               <Route path='/' element={<Home data={data}/>}></Route>
               <Route path='/login' element={<Login data={data}/>}></Route>
               <Route path='/join' element={<Join/>}></Route>
-              <Route path='/wish' element={<Wish data={data}/>}></Route>
+              <Route path='/wish' element={<Wish />}></Route>
               <Route path='/new' element={<NewMeals data={data}/>}></Route>
-              {/* <Route path='/detail/:id' element={<MealsDetail data={data}/>}></Route> */}
+              <Route path='/detail/:id' element={<MealsDetail data={data}/>}></Route>
             </Routes>
 
             <Footer />
