@@ -5,11 +5,14 @@
 import { configureStore } from "@reduxjs/toolkit";
 //counterSlice 안에있는걸 다 가지고옴. countReducer라는 이름은 작명
 import countReducer from './ReduxToolkit/counterSlice';
+import productReducer from './store02/productSlice';
+import cartReducer from './store02/cartSlice'
 
 export const store = configureStore({
     reducer:{
         //앞에붙는 'counter'는 counterSlice.js파일의 name : 'counter'와 반드시 같아야 한다.
         counter:countReducer,
-
+        product:productReducer,
+        cart:cartReducer
     }
 })

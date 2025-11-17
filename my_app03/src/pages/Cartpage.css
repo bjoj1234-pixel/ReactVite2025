@@ -1,0 +1,23 @@
+*{
+    list-style: none;
+    box-sizing: border-box;
+}
+section{
+    width: 900px;
+}
+section ul{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+section ul li{
+    width: 20%;
+    border: 1px solid #000;
+}
+section ul li img{
+    width: 100%;
+}
+section ul li button{
+    background-color: #000;
+    color: #fff;
+}
