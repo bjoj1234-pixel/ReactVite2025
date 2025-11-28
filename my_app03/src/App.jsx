@@ -11,17 +11,19 @@ import Section from './pages/Section'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import CartPage from './pages/CartPage'
+import CookieTest from './cookie/CookieTest'
+import LoginCookie from './cookie/LoginCookie'
 
 
 function App() {
 
   return (
     <>
-      <BrowserRouter>
+      {/* <BrowserRouter> */}
       {/* <Counter /> */}
       {/* <Cart /> */}
       {/* <Test /> */}
-        <Header />
+        {/* <Header />
 
         <Routes>
           <Route path='/' element={<Section />}/>
@@ -29,8 +31,16 @@ function App() {
         </Routes>
 
         <Footer />
-      </BrowserRouter>
+      </BrowserRouter> */}
+      
+
+      {/* <CookieTest /> */}
+      
+
+      <LoginCookie />
     </>
+
+
   )
 }
 
